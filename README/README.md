@@ -13,4 +13,6 @@ The Spots web application is the third in the Software Engineering program at Tr
 - Overflow
 - Responsive Design
 
-[Media query]()
+[Media query](../README/Media%20query.png)
+[Overflow](../README/Overflow.png)
+[Flexbox](../README/Flexbox.png)

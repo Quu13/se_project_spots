@@ -21,4 +21,4 @@ The Spots web application is the third in the Software Engineering program at Tr
 
 This webpage is deployed to GitHub Pages
 
-- Deployment Link: https://quu13.github.io/se_project_spots/
+- [Deployment Link](https://quu13.github.io/se_project_spots/)

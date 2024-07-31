@@ -1,0 +1,22 @@
+.footer__copyright{
+    padding: 60px 0;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    color: #212121;
+    opacity: 70%;
+}
+
+@media screen and (max-width: 627px) {
+    .footer__copyright{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+        display: flex;
+        align-items: center; 
+        margin: 60px 108px; 
+        justify-content: center;
+    }
+}

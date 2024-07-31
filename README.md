@@ -2,7 +2,7 @@
 
 ## Description
 
-The Spots web application is the third in the Software Engineering program at TripleTen. The project is used to show students how to properly build webpages that accommodate for both PCs and smartphones by heavily implimenting media queries into their CSS files. IT's also used help students get integrated  with a new program call Figma.  
+The Spots web application is the third in the Software Engineering program at TripleTen. The project is used to show students how to properly build webpages that accommodate for both PCs and smartphones by heavily implimenting media queries into their CSS files. It's also used help students get integrated  with a new program call Figma.  
 
 
 ## Project features

@@ -1,21 +1,24 @@
-# Project 3: Spots
+ # Spots
 
-### Overview  
+## Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+The Spots web application is the third in the Software Engineering program at TripleTen. The project is used to show students how to properly build webpages that accommodate for both PCs and smartphones by heavily implimenting media queries into their CSS files. IT's also used help students get integrated  with a new program call Figma.  
+
+
+## Project features
+
+
+- Flexbox
+- Postioning
+- Media query
+- Font face
+- Overflow
+- Responsive Design
+
+[Media query](../README/Media%20query.png)
+[Overflow](../README/Overflow.png)
+[Flexbox](../README/Flexbox.png)
+
+This webpage is deployed to GitHub Pages
+
+- [Deployment Link](https://quu13.github.io/se_project_spots/)

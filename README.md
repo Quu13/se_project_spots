@@ -12,7 +12,7 @@
 - Overflow
 - Responsive Design
 
-[Media query](../se_project_spots/Images/Media%20query.png)
+[Media query](../se_project_spots/Images/Mediaquery.png) 
 [Overflow](../se_project_spots/Images/Overflow.png)
 [Flexbox](../se_project_spots/Images/Flexbox.png)
 

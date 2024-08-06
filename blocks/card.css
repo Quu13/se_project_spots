@@ -8,6 +8,10 @@
 }
 
 .card__title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 350px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -43,5 +47,6 @@
  .card__title{
     font-size: 16px;
     line-height: 1;
+    max-width: 230px;
  }
 }

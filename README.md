@@ -19,3 +19,5 @@
 This webpage is deployed to GitHub Pages
 
 - [Deployment Link](https://quu13.github.io/se_project_spots/)
+
+- [Video Link](https://drive.google.com/file/d/1JDlsk6TQb4s6Bg8u2L1B0ZxpTU61TCV_/view?usp=drive_link)

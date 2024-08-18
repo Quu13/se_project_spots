@@ -25,7 +25,18 @@ const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector("#profile-description-input");
 
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
 
+function getCardElement(data) {
+   const CardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
+   const cardNameEl = CardElement.querySelector(".card__title");
+   const cardImageElement = CardElement.querySelector(".card__image");
+   cardNameEl.textContent = data.name;
+   cardImageElement.src = data.link;
+   cardImageElement.attributeName = data.name;
+   return CardElement;
+}
 
 function openModal() {
     editModalNameInput.value = profileName.textContent;
@@ -49,5 +60,8 @@ editModalCloseBtn.addEventListener("click", closeModal);
 editFormElement.addEventListener("sumbit", handleEditFormSubmit);
 
 
-
+for (let i = 0; i < initialCards.length; i++) {
+   const CardElement = getCardElement(initialCards[i]);
+   cardsList.prepend(CardElement);
+}
 

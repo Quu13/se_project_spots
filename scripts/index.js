@@ -51,13 +51,13 @@ function closeModal() {
 function handleEditFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = editModalNameInput.value;
-    profileDescription.textcontent = editModalDescriptionInput.value;
+    profileDescription.textContent = editModalDescriptionInput.value;
     closeModal();
 }
 
 profileEditButton.addEventListener("click", openModal);
 editModalCloseBtn.addEventListener("click", closeModal);
-editFormElement.addEventListener("sumbit", handleEditFormSubmit);
+editFormElement.addEventListener("submit", handleEditFormSubmit);
 
 
 for (let i = 0; i < initialCards.length; i++) {

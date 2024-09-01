@@ -53,7 +53,6 @@
     <div class="modal" id="edit-modal" >
       <div class="modal__container">
         <button type="submit" class="modal__close-btn">
-          <img src="./Images/close.svg">
         </button>
         <h2 class="modal__title">Edit profile</h2>
         <form name="edit-profile" class="modal__form">
@@ -62,6 +61,7 @@
             <input 
             id="profile-name-input"
             type="text"
+            name="name"
             class="modal__input"
             placeholder="Type your name">
           </label>
@@ -69,7 +69,8 @@
             Description  
             <input
              id="profile-description-input"
-             type="text" 
+             type="text"
+             name="description" 
              class="modal__input"
              placeholder="Describe yourself">
           </label>
@@ -80,6 +81,39 @@
       </div>
     </div>  
  </div>
+
+ <div class="modal" id="add-card-modal" >
+  <div class="modal__container">
+    <button type="submit" class="modal__close-btn">
+      <img src="./Images/close.svg">
+    </button>
+    <h2 class="modal__title">New post</h2>
+    <form name="add-card" class="modal__form">
+      <label for="add-card-link-input" class="modal__label">
+        Image link
+        <input 
+        id="add-card-link-input"
+        type="url"
+        name="link"
+        class="modal__input"
+        placeholder="Paste a link to the picture">
+      </label>
+      <label for="add-card-name-input" class="modal__label">
+        Caption  
+        <input
+         id="add-card-name-input"
+         type="text" 
+         name="name"
+         class="modal__input"
+         placeholder="Type your caption">
+      </label>
+      <button type="submit" class="modal__submit-btn">
+        Save
+      </button>
+    </form>
+   </div>
+ </div>  
+</div>
  <script defer src="./scripts/index.js"></script> 
 </body>
 </html>

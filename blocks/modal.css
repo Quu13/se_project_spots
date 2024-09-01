@@ -34,8 +34,12 @@
     height: 40px;
     opacity: 40%;
     border: none;
-    background-color: transparent;
+    background: transparent url("../Images/close.svg") center no-repeat;
 }
+
+.modal__close-btn:hover {
+    opacity: 1;
+} 
 
 .modal__title{
     margin: 0 0 32px;
@@ -63,6 +67,15 @@
     line-height: 1;
 }
 
+.modal__input::placeholder {
+    color: #212121;
+    opacity: 30%;
+}
+
+.modal__input:hover {
+    border: 1px solid rgb(33, 33, 33);
+}
+
 .modal__submit-btn{
     width: 156px;
     padding: 18px 0;
@@ -72,6 +85,12 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1; 
+    transition: 0.3s;
+}
+
+.modal__submit-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {

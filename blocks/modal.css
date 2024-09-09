@@ -11,10 +11,54 @@
     justify-content: center;
     visibility: hidden;
     padding: 0 20px;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s linear;
 }
 
 .modal_opened{
     visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.6s;
+}
+
+.modal__content {
+    max-width: 80vw;
+    box-sizing: border-box;
+    bottom: 60px;
+    border-radius: 10px;
+    position: relative;
+    padding: 36px 50px 32px;
+}
+
+.modal__content_type_preview{
+   padding: 0;
+   width: unset; 
+   max-width: 80vw;
+}
+
+.modal__image{
+    width: 100%;
+    object-fit: contain;
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    margin-top: 81px;
+}
+
+.modal__caption{
+    background-color: #212121;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 8px;
+    border-radius: 8px;
+    width: 214px;
+    height: 32px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal__container{
@@ -24,6 +68,7 @@
   width: 100%;
   box-sizing: border-box;
   position: relative; 
+  border-radius: 8px;
 }
 
 .modal__close-btn{
@@ -39,7 +84,15 @@
 
 .modal__close-btn:hover {
     opacity: 1;
-} 
+    cursor: pointer;
+}
+
+.modal__close-btn_type_preview{
+    background-image: url("../Images/close-light.svg");
+    top: 80px;
+    right: -52.7px;
+    opacity: 1;
+}
 
 .modal__title{
     margin: 0 0 32px;
@@ -65,6 +118,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1;
+
 }
 
 .modal__input::placeholder {
@@ -111,7 +165,13 @@
 
     .modal__close-btn{
         top: 12px;
-        right: 12px;
+        margin-right: -20px;
+       
+    }
+
+    .modal__close-btn_type_preview{
+        margin-top: 158px;
+        right: 16px;
     }
 
     .modal__input{
@@ -126,4 +186,29 @@
     .modal__submit-btn{
         width: 100%;
     }
+
+    .modal__caption{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        margin-top: 8px;
+        border-radius: 8px;
+        width: 175px;
+        height: 27px;
+        margin-right: 113px;
+    }
+
+    .modal__image{
+        margin-top: 206px;
+        margin-right: 16px;
+        border-radius: 4px;
+        max-width: 320px;
+    }
+
+    .modal__content_type_preview{
+        width: unset;
+        margin-bottom: 88.42px;
+        max-width: 320px;
+}
+
 }

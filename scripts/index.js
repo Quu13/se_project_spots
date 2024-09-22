@@ -1,5 +1,3 @@
-// TODO - passing settings object to the validation functions that are called in this file
-
 const initialCards = [
   {
     name: "Golden Gate Bridge",

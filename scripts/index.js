@@ -72,7 +72,7 @@ function handleModalOverlay(evt) {
 
 function handleModalEscape(evt) {
   if (evt.key === "Escape") {
-    const openedModal = document.querySelector("modal_opened");
+    const openedModal = document.querySelector(".modal_opened");
     closeModal(openedModal);
   }
 }

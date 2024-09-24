@@ -79,7 +79,7 @@ function handleModalEscape(evt) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  modal.addEventListener("click", handleModalOverlay);
+  modal.removeEventListener("click", handleModalOverlay);
   document.addEventListener("keydown", handleModalEscape);
 }
 
@@ -128,7 +128,6 @@ function getCardElement(data) {
   cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
-    previewModalImageEl.textContent = data.name;
     previewModalImageEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
   });

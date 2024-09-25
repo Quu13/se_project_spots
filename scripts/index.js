@@ -79,13 +79,13 @@ function handleModalEscape(evt) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  modal.removeEventListener("click", handleModalOverlay);
+  modal.addEventListener("click", handleModalOverlay);
   document.addEventListener("keydown", handleModalEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  modal.addEventListener("click", handleModalOverlay);
+  modal.removeEventListener("click", handleModalOverlay);
   document.removeEventListener("keydown", handleModalEscape);
 }
 

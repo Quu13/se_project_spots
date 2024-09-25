@@ -1,4 +1,4 @@
-const settings = {
+const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
@@ -52,7 +52,7 @@ const disableButton = (buttonEl, config) => {
 
 const resetValidation = (formEl, inputList) => {
   inputList.forEach((input) => {
-    hideInputError(formEl, input)
+    hideInputError(formEl, input, config)
   })
 };
 
@@ -77,5 +77,5 @@ const enableValidation = (config) => {
     })
 };
 
-enableValidation(settings);
+enableValidation(config);
 

@@ -1,6 +1,8 @@
 import { enableValidation, settings, disableButton } from "../scripts/validation.js";
 import "./index.css";
 
+enableValidation(settings);
+
 
 
 const initialCards = [

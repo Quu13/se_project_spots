@@ -14,7 +14,7 @@
   <header class="header">
     <img 
     class="header__logo"
-    src="" 
+    src="<%=required('./Images/logo.svg')%>" 
     alt="Spots logo" >
   </header>
   <main class="content">
@@ -29,12 +29,14 @@
         <button type="button" class="profile__edit-btn">
           <img 
           class="header__logo"
-          src="<%=require('./Images/logo.svg')%>"
+          src="<%=require('./Images/pencil.svg')%>"
           alt="pencil icon">Edit Profile
         </button>
         </div>
         <button type="button" class="profile__add-btn">
-        <img src="<%=require(./Images/plus.svg')%" alt="plus icon">New Post
+        <img 
+        src="<%=require('./Images/plus.svg')%" 
+        alt="plus icon">New Post
       </button>
     </section>
     <section class="cards page__section">
@@ -55,7 +57,7 @@
       <footer class="footer">
         <p class="footer__copyright">2024 &copy; Benicen Soto</p>
       </footer>
-    <div class="modal" id="edit-modal" >
+    <div class="modal" id="edit-modal">
       <div class="modal__container">
         <button type="submit" class="modal__close-btn">
         </button>

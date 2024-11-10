@@ -1,5 +1,6 @@
-import { enableValidation, settings, disableButton } from "../scripts/validation.js";
+import { enableValidation, settings, disableButton, resetValidation } from "../scripts/validation.js";
 import "./index.css";
+
 
 enableValidation(settings);
 
@@ -149,7 +150,11 @@ function getCardElement(data) {
 editModalBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editFormElement, [editModalNameInput, editModalDescriptionInput]);
+  resetValidation(
+    editFormElement, 
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  );
   openModal(editModal);
 });
 

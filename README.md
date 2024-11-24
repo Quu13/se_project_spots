@@ -1,7 +1,6 @@
  # Spots
 
 ## Description
-https://quu13.github.io/se_project_spots/
 
 ## Project features
 

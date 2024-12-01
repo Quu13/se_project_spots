@@ -109,8 +109,8 @@ const cardModalClosepreview = previewModal.querySelector(
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
-let SelectedCard;
-let SelectedCardID;
+let selectedCard;
+let selectedCardId;
 
 
 /* Functions */

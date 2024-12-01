@@ -34,6 +34,16 @@ class Api {
       return this._request("/users/me");
     }
 
+    addNewCard({ name, link }) {
+      return this._request("/cards", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          link,
+        }),
+      });
+    }  
+
   editUserInfo({ name, about }) {
     return this._request("/users/me", {
       method: "PATCH",
@@ -43,8 +53,29 @@ class Api {
       }),
     });
   }
+
+
+editAvatarInfo(avatar) {
+  return this._request("/users/me/avatar", {
+    method: "PATCH",
+    body: JSON.stringify({
+      avatar,
+    }),
+  });
 }
-  
-    
-  
+
+
+deleteCard(id) { 
+  return this._request(`/cards/${id}`, {
+    method: "DELETE",
+  });
+}
+
+changeLikeStatus(id, isLiked) {
+  return this._request(`/cards/${id}/likes`, {
+    method: isLiked ? "DELETE" : "PUT",
+    });
+  }
+}
+
   export default Api;

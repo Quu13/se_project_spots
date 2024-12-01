@@ -92,6 +92,11 @@ const avatarSubmitBtn = avatarModal.querySelector(".modal__submit-btn");
 const avatarModalCloseBtn = avatarModal.querySelector(".modal__close-btn");
 const avatarInput = avatarModal.querySelector("#modal-avatar-description-input");
 
+// Delete form elements
+const deleteModal = document.querySelector("#modal__delete")
+const deleteForm = deleteModal.querySelector(".modal__form");
+
+
 /* select the modal! */
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
@@ -103,6 +108,9 @@ const cardModalClosepreview = previewModal.querySelector(
 /* Card related elements! */
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
+
+let SelectedCard;
+let SelectedCardID;
 
 
 /* Functions */
@@ -133,6 +141,9 @@ function closeModal(modal) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
+
+  // Change text content to "Saving..."
+
   api
   .editUserInfo({ 
     name: editModalNameInput.value, 
@@ -158,6 +169,39 @@ function handleAddCardSubmit(evt) {
   closeModal(cardModal);
 }
 
+function handleAvatarSubmit(evt) {
+  function makeRequest() {
+    return api.editAvatarInfo(avatarInput.value).then((data) => {
+      if (data.avatar) {
+        avatarElement.src = data.avatar;
+        avatarElement.alt = "Updated Avatar";
+      }
+      closeModal(avatarModal);
+    });
+  }
+
+  handleSubmit(makeRequest, evt, settings);
+}
+
+function handleDeleteSubmit(evt) {
+  function makeRequest() {
+    return api.deleteCard(selectedCardId).then(() => {
+      selectedCard.remove();
+      selectedCard = null;
+      selectedCardId = null;
+      closeModal(deleteModal);
+    });
+  }
+
+  handleSubmit(makeRequest, evt, settings, false, "Deleting...");
+}
+
+function handleDeleteCard(cardElement, cardId) {
+  selectedCard = cardElement;
+  selectedCardId = cardId;
+  openModal(deleteModal);
+}
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -171,24 +215,22 @@ function getCardElement(data) {
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-  function handleAvatarSubmit(evt) {
-    function makeRequest() {
-      return api.editAvatarInfo(avatarInput.value).then((data) => {
-        if (data.avatar) {
-          avatarElement.src = data.avatar;
-          avatarElement.alt = "Updated Avatar";
-        }
-        closeModal(avatarModal);
-      });
-    }
-  
-    handleSubmit(makeRequest, evt, settings);
+  if (data.isLiked) {
+    cardLikeBtn.classList.add("card__like-btn_liked");
   }
 
+  function handleLike(evt, id) {
+    const isLiked = cardLikeBtn.classList.contains("card__like-btn_liked");
+    api
+      .changeLikeStatus(data._id, isLiked)
+      .then((res) => {
+        cardLikeBtn.classList.toggle("card__like-btn_liked", res.isLiked);
+      })
+      .catch(console.error);
+    }  
+
   /* EventListeners!*/
-  cardLikeBtn.addEventListener("click", () => {
-    cardLikeBtn.classList.toggle("card__like-btn_liked");
-  });
+  cardLikeBtn.addEventListener("click", handleLike);
 
   cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
@@ -197,9 +239,12 @@ function getCardElement(data) {
     previewModalCaptionEl.textContent = data.name;
   });
 
-  cardDeleteBtn.addEventListener("click", function () {
-    cardElement.remove();
+
+
+  cardDeleteBtn.addEventListener("click", (evt) => {
+    handleDeleteCard(cardElement, data._id);
   });
+
 
   return cardElement;
 }
@@ -236,9 +281,15 @@ avatarModalBtn.addEventListener("click", () => {
   openModal(avatarModal);
 });
 
+avatarModalCloseBtn.addEventListener("click", () => {
+  closeModal(avatarModal);
+});
+
+
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 avatarForm.addEventListener("submit", handleAvatarSubmit);
+deleteForm.addEventListener("submit",handleDeleteSubmit)
 
 
 enableValidation(settings);

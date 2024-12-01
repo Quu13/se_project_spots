@@ -144,6 +144,29 @@
   line-height: 1.2;
 }
 
+.modal__submit-btn_delete {
+  background-color: #ff6565;
+  border: none;
+  text-align: center;
+}
+
+.modal__submit-btn_delete:hover {
+  background-color: #ff3333 !important;
+  cursor: pointer;
+}
+
+.modal__submit-btn_cancel {
+  background-color: #fff;
+  color: #212121;
+  text-align: center;
+}
+
+.modal__submit-btn_cancel:hover {
+  background-color: #212121 !important;
+  color: #fff;
+  cursor: pointer;
+}
+
 .modal__submit-btn {
   width: 156px;
   padding: 18px 0;

@@ -177,8 +177,8 @@
   cursor: pointer;
 }
 
-.modal__submit-btn--delete,
-.modal__submit-btn--cancel {
+.modal__submit-btn_delete,
+.modal__submit-btn_cancel {
   text-align: center;
 }
 

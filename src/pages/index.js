@@ -66,6 +66,7 @@ const avatarInput = avatarModal.querySelector("#modal-avatar-description-input")
 // Delete form elements
 const deleteModal = document.querySelector("#modal__delete")
 const deleteForm = deleteModal.querySelector(".modal__form");
+const deleteModalCloseBtn = deleteModal.querySelector(".modal__close-btn");
 
 
 /* select the modal! */
@@ -253,6 +254,9 @@ cardModalClosepreview.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
+deleteModalCloseBtn.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
 
 avatarModalBtn.addEventListener("click", () => {
   openModal(avatarModal);

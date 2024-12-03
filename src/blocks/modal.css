@@ -89,7 +89,7 @@
 
 .modal__close-btn_type_preview {
   background-image: url("../Images/close-light.svg");
-  top: 80px;
+  top: 0;
   right: -52.7px;
   opacity: 1;
 }
@@ -144,6 +144,12 @@
   line-height: 1.2;
 }
 
+.modal__form-delete {
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+}
+
 .modal__submit-btn {
   width: 156px;
   padding: 18px 0;
@@ -159,6 +165,7 @@
 .modal__submit-btn_delete {
   background-color: #ff6565;
   border: none;
+  color: #212121;
 }
 
 .modal__submit-btn_delete:hover {
@@ -175,11 +182,6 @@
   background-color: #212121 !important;
   color: #fff;
   cursor: pointer;
-}
-
-.modal__submit-btn_delete,
-.modal__submit-btn_cancel {
-  text-align: center;
 }
 
 .modal__submit-btn:hover {

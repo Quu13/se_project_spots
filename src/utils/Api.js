@@ -49,7 +49,7 @@ class Api {
       method: "PATCH",
       body: JSON.stringify({
         name,
-        about
+        about,
       }),
     });
   }

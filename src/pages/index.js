@@ -68,7 +68,7 @@ const avatarInput = avatarModal.querySelector("#modal-avatar-description-input")
 const deleteModal = document.querySelector("#modal__delete")
 const deleteForm = deleteModal.querySelector(".modal__form");
 const deleteModalCloseBtn = deleteModal.querySelector(".modal__close-btn");
-const deleteCancelBtn = deleteModal.querySelector(".modal__sumbit-btn");
+const deleteCancelBtn = deleteModal.querySelector(".modal__sumbit-btn_cancel");
 
 
 /* select the modal! */

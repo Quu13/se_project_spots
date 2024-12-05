@@ -26,7 +26,6 @@ const api = new Api({
     profileName.textContent = userInfo.name;
     profileDescription.textContent = userInfo.about;
 
-    const avatarImage = document.querySelector(".profile__avatar");
     avatarImage.src = userInfo.avatar;
   })
   .catch(console.error);
@@ -75,7 +74,7 @@ const deleteCancelBtn = deleteModal.querySelector(".modal__submit-btn_cancel");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
-const cardModalClosepreview = previewModal.querySelector(
+const cardModalClosePreview = previewModal.querySelector(
   ".modal__close-btn_type_preview"
 );
 
@@ -252,7 +251,7 @@ cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
 });
 
-cardModalClosepreview.addEventListener("click", () => {
+cardModalClosePreview.addEventListener("click", () => {
   closeModal(previewModal);
 });
 

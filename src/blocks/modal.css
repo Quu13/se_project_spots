@@ -198,26 +198,28 @@
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .modal__container {
     padding: 12px;
+    max-width: 320px;
   }
 
   .modal__title {
     font-size: 20px;
-    margin-bottom: 24px;
-    margin-top: 10px 0 34px;
+    margin: 10px 0 34px;
   }
 
-  .modal__close-btn {
+ .modal__close-btn {
     top: 12px;
-    margin-right: -20px;
+    right: 12px;
   }
 
   .modal__close-btn_type_preview {
-    margin-top: -58px;
-    right: 16px;
+    top: -40px;
+    left: 250px;
+    padding-bottom: 0px;
   }
 
   .modal__input {

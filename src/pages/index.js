@@ -26,7 +26,7 @@ const api = new Api({
     profileName.textContent = userInfo.name;
     profileDescription.textContent = userInfo.about;
 
-    avatarImage.src = userInfo.avatar;
+    avatarElement.src = userInfo.avatar;
   })
   .catch(console.error);
 

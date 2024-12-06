@@ -52,11 +52,13 @@
 
 .card__like-btn_liked{
   background-image: url("../Images/like-icon-liked.svg");
-  opacity: 1;
+  opacity: 100%;
+  background-repeat: no-repeat;
 }
 
 .card__like-btn_liked:hover{
    background-image: url("../Images/like-icon-hover.svg"); 
+   opacity: 100%;
 }
 
 .card__delete-btn{
